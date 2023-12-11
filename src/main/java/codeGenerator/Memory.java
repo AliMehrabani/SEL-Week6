@@ -21,11 +21,15 @@ public class Memory {
     }
 
     public int getTemp() {
-        return lastTempIndex - tempSize;
+        return lastTempIndex - getTempSize();
     }
 
     public void incTemp() {
-        lastTempIndex += tempSize;
+        lastTempIndex += getTempSize();
+    }
+
+    public int getTempSize() {
+        return tempSize;
     }
 
     public int getDateAddress() {
