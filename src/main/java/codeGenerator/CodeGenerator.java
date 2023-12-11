@@ -307,7 +307,9 @@ public class CodeGenerator {
         Address s2 = ss.pop();
         Address s1 = ss.pop();
 
-        if (s1.varType != varType.Int || s2.varType != varType.Int) {
+        boolean isS1Int = s1.varType != varType.Int;
+        boolean isS2Int = s2.varType != varType.Int;
+        if (isS1Int || isS2Int) {
             ErrorHandler.printError("In add two operands must be integer");
         }
         memory.add3AddressCode(Operation.ADD, s1, s2, temp);
