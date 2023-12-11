@@ -173,7 +173,7 @@ public class CodeGenerator {
                         t = varType.Int;
                         break;
                 }
-                ss.push(new Address(s.address, t));
+                ss.push(new Address(s.getAddress(), t));
 
 
             } catch (Exception e) {
@@ -201,7 +201,7 @@ public class CodeGenerator {
                 t = varType.Int;
                 break;
         }
-        ss.push(new Address(s.address, t));
+        ss.push(new Address(s.getAddress(), t));
 
     }
 
@@ -275,7 +275,7 @@ public class CodeGenerator {
             if (param.varType != t) {
                 ErrorHandler.printError("The argument type isn't match");
             }
-            memory.add3AddressCode(Operation.ASSIGN, param, new Address(s.address, t), null);
+            memory.add3AddressCode(Operation.ASSIGN, param, new Address(s.getAddress(), t), null);
 
 //        symbolStack.push(className);
 

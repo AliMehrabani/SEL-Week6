@@ -6,10 +6,14 @@ package semantic.symbol;
 
 public class Symbol {
     public SymbolType type;
-    public int address;
+    private int address;
 
     public Symbol(SymbolType type, int address) {
         this.type = type;
         this.address = address;
+    }
+
+    public int getAddress() {
+        return address;
     }
 }
